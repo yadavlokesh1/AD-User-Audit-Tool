@@ -1,7 +1,7 @@
 Import-Module ActiveDirectory
 
 $daysInactive = 90
-$outputPath = ".\AD_User_Audit_Report.csv"
+$outputPath = "$env:USERPROFILE\Desktop\Group_Members_Report.csv"
 
 $users = Get-ADUser -Filter * -Properties DisplayName, Enabled, LastLogonDate, PasswordLastSet, Created |
 Select-Object @{
