@@ -1,0 +1,71 @@
+# AD User Audit Tool
+
+## Overview
+This PowerShell script audits Active Directory user accounts and exports important account information into a CSV report.
+
+The report helps administrators review:
+- Enabled accounts
+- Last logon activity
+- Password last set date
+- Account creation date
+- Inactive users
+
+## Features
+- Export AD user information to CSV
+- Calculate inactive days automatically
+- Simple and easy-to-read output
+- Supports single-domain environments
+- Lightweight script with minimal configuration
+
+## Requirements
+- Windows PowerShell 5.1 or later
+- Active Directory PowerShell Module
+- Domain-connected machine
+- Read access to Active Directory
+
+## Usage
+
+Run the script from PowerShell:
+
+```powershell
+.\AD-User-Audit.ps1
+```
+
+## Output File
+
+The script generates:
+
+```txt
+AD_User_Audit_Report.csv
+```
+
+## Example CSV Output
+
+| DisplayName | SamAccountName | Enabled | PasswordLastSet | LastLogonDate | InactiveDays |
+|---|---|---|---|---|---|
+| John Doe | jdoe | True | 05-01-2026 | 10-05-2026 | 3 |
+| Sarah Smith | ssmith | True | 12-12-2025 | 01-01-2026 | 132 |
+| Test User | tuser | False | 20-11-2025 |  | Never Logged In |
+
+## Example Use Cases
+- AD account auditing
+- Security review preparation
+- Identifying inactive accounts
+- User activity reporting
+- Internal compliance checks
+
+## Domain Scope
+
+This script is designed for single-domain Active Directory environments.
+
+It targets the domain of the machine/server where the script is executed.
+
+## Notes
+- Test the script in a lab environment before production use
+- Some accounts may show blank LastLogonDate if they never logged in
+- CSV output can be opened directly in Microsoft Excel
+
+## Author
+
+Lokesh Yadav  
+Windows System Administrator
