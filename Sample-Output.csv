@@ -1,0 +1,5 @@
+DisplayName,SamAccountName,Enabled,Created,PasswordLastSet,LastLogonDate,InactiveDays
+John Doe,jdoe,True,2024-01-15,2026-05-01,2026-05-10,3
+Sarah Smith,ssmith,True,2023-11-22,2025-12-12,2026-01-01,132
+Mike Johnson,mjohnson,False,2022-08-10,2025-10-05,,Never Logged In
+Emily Davis,edavis,True,2024-06-18,2026-04-25,2026-05-11,2
